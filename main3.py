@@ -1,4 +1,4 @@
-# using jars option and AWS SDK V1
+# using jars option and AWS SDK V2
 from pyspark.sql import SparkSession
 
 AWS_ACCESS_KEY = 'sayed' #'Replace it with your access key
@@ -6,9 +6,11 @@ AWS_SECRET_KEY = 'sayedsayed' #'Replace it with your access secret key
 BUCKET_NAME = 'test' # Replace it with your bucket name
 JARS_PATH = '.' # replace it with path where you saved your jars
 
+# alot of jars are required so it is easier to use packages option, see main4.py
+# this code will fail as more jars are required
 jars = ','.join(
     [f'{JARS_PATH}/hadoop-aws-3.3.4.jar',
-     f'{JARS_PATH}/aws-java-sdk-bundle-1.12.767.jar'])
+     f'{JARS_PATH}/software.amazon.awssdk_s3-2.27.15.jar'])
 
 print(jars)
 
