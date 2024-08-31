@@ -38,11 +38,14 @@ https://hadoop.apache.org/docs/stable/hadoop-aws/tools/hadoop-aws/index.html
 
 
 ## Note
-I am using minio for simplicity if you need to use AWS S3 you can remove these config related to
-minio
-.config("fs.s3a.endpoint", 'localhost:9000') 
-.config("fs.s3a.connection.ssl.enabled", "false") 
-.config("fs.s3a.path.style.access", "true") 
-.config("fs.s3a.attempts.maximum", "1")
-.config("fs.s3a.connection.establish.timeout", "1000")
-.config("fs.s3a.connection.timeout", "10000")
+I am using minio for simplicity if you need to use AWS S3 you can remove these config related to minio
+
+- .config("fs.s3a.endpoint", 'localhost:9000') 
+- .config("fs.s3a.connection.ssl.enabled", - "false")
+- .config("fs.s3a.path.style.access", "true") 
+- .config("fs.s3a.attempts.maximum", "1")
+- .config("fs.s3a.connection.establish.- timeout", "1000")
+- .config("fs.s3a.connection.timeout", "10000")
+
+
+Also you can use hadoop-aws jar or package only and spark will knows that this also needs aws java skd bundle and will download the correct version (main5.py)
